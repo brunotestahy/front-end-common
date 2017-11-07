@@ -1,0 +1,27 @@
+.wrapper{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 16px 0;
+}
+
+.wrapper.opened{
+    background-color: #3c352d;
+}
+
+.icon{
+    background-size: 38px;
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+ul{
+    padding: 0;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #3c352d;
+    z-index: 2;
+}

@@ -1,0 +1,9 @@
+<div class="wrapper" [ngClass]="{'opened': opened}">
+  <div class="icon front-end-img"
+       [ngClass]="{'menu': !opened, 'menu-white': opened}"
+       (click)="toggle()">
+  </div>
+  <ul *ngIf="opened">
+    <ng-content></ng-content>
+  </ul>
+</div>

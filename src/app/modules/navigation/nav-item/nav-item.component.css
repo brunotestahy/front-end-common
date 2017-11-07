@@ -1,0 +1,28 @@
+.box{
+  height: 80px;
+  width: 120px;
+  display: block;
+  float: left;
+  cursor: pointer;
+  background-repeat: no-repeat !important;
+  background-size: 80px !important;
+  background-position: top !important;
+  background-position-y: -10px !important;
+}
+
+.box:focus {
+  border: 0px;
+  outline: none;
+}
+
+.nav-label{
+  color: #635953;
+  text-transform:uppercase;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.active{
+  background-color: #c1b7b1 !important;
+}

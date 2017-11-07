@@ -1,0 +1,16 @@
+<smart-card class="practitioner-card">
+  <div content>
+    <smart-practitioner-thumbnail [practitioner]="practitioner"
+                                  border="6px solid #fff"
+                                  width="110px"
+                                  height="110px"
+                                  borderRadius="55px"
+                                  class="practitioner-thumb"></smart-practitioner-thumbnail>
+    <div class="role" *ngIf="practitioner.practitionerRoles" >{{practitioner.practitionerRoles.join(', ')}}</div>
+    <div class="name">{{practitioner.fullName}}</div>
+    <div class="crm">CRM {{practitioner.crm}} {{practitioner.crmUF}}</div>
+  </div>
+  <div actions>
+    <ng-content select="[actions]"></ng-content>
+  </div>
+</smart-card>

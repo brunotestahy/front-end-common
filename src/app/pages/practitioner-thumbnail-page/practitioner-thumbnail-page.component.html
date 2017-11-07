@@ -1,0 +1,36 @@
+<div class="row">
+    <smart-practitioner-thumbnail [practitioner]="practitioner"></smart-practitioner-thumbnail>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-practitioner-thumbnail &#91;practitioner&#93;="practitioner"&gt;&lt;/smart-practitioner-thumbnail&gt;</code></pre>
+</div>
+<div class="row">
+    <smart-practitioner-thumbnail [practitioner]="noPhotoPractitioner"></smart-practitioner-thumbnail>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-practitioner-thumbnail &#91;practitioner&#93;="noPhotoPractitioner"&gt;&lt;/smart-practitioner-thumbnail&gt;</code></pre>
+</div>
+<div class="row">
+  <div class="wrapper">
+    <smart-practitioner-thumbnail *ngFor="let practitioner of practitioners"
+                                  [practitioner]="practitioner"
+                                  border="5px solid #fff"
+                                  width="99px"
+                                  height="99px"
+                                  borderRadius="49px">
+    </smart-practitioner-thumbnail>
+  </div>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;div class="wrapper"&gt;
+  &lt;smart-practitioner-thumbnail *ngFor="let practitioner of practitioners"
+                                &#91;practitioner&#93;="practitioner"
+                                border="5px solid #fff"
+                                width="99px"
+                                height="99px"
+                                borderRadius="49px"&gt;
+  &lt;/smart-practitioner-thumbnail&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+

@@ -1,0 +1,41 @@
+#header-page{
+  height: 80px;
+  /*border: 1px solid;*/
+}
+
+#header-page #header_superior {
+  padding-top: 17px;
+}
+#header-page #header_superior .container-fluid {
+  padding: 0px 50px 0px 50px;
+}
+
+#logo{
+  float: left;
+}
+
+.logo-img{
+  width: 185px;
+  height: 46px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 222px;
+}
+
+.header-col{
+  min-height: 46px;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.header-col.right, .header-col.right{
+  float: right;
+};
+
+.header-col.left, .header-col.left{
+  float: left;
+};
+
+.clear{
+  clear: both;
+}

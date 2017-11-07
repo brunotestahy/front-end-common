@@ -1,0 +1,12 @@
+<div class="row">
+  <smart-select width="100px" [(value)]="value" (change)="onchange($event)">
+    <smart-option display="Todos"></smart-option>
+    <smart-option *ngFor="let i of [1,2,3,4,5]" [value]="''+i" [display]="'item ' + i" ></smart-option>
+  </smart-select>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-select width="100px" [(value)]="value" (change)="onchange($event)">
+  &lt;smart-option display="Todos">&lt;/smart-option>
+  &lt;smart-option *ngFor="let i of [1,2,3,4,5]" [value]="''+i" [display]="'item ' + i" >&lt;/smart-option>
+&lt;/smart-select></code></pre>
+</div>

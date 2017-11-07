@@ -1,0 +1,55 @@
+.new-event {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+  align-items: center;
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
+  justify-content: space-around;
+  min-height: 8rem;
+  background-color: #ffffff;
+  border-radius: .6rem .6rem 0 0;
+  border: none;
+  padding: 0 3%;
+}
+
+.pro-view  {
+  color: #4D4337;
+  font-size: 1.55vw;
+  margin: 0 1rem;
+}
+
+.btn-new-event  {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;
+  align-items: center;
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
+  justify-content: space-around;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  color: #E09E95;
+  font-weight: bold;
+  text-transform: uppercase;
+  min-width: 20rem;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-new-event img {
+  height: 4rem;
+  width: 3rem;
+}
+
+.thumbnail {
+  margin: 1rem 0;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.thumbnail img {
+  border-radius: 50%;
+}

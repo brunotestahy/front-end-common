@@ -1,0 +1,18 @@
+.photo-chooser{
+  position: relative;
+  display: inline-block;
+}
+
+a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  font-weight: bold;
+  color: #e0857d;
+}
+
+.photo-chooser-thumbnail{
+  cursor: pointer;
+}

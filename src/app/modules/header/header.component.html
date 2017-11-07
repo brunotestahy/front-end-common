@@ -1,0 +1,27 @@
+<header id="header-page">
+  <div id="header_superior">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="logo">
+          <a [href]="logoHref" (click)="onlogoClick()">
+            <div class="front-end-img logo-img"></div>
+          </a>
+        </div>
+        <div class="header-col left">
+          <ng-content select="[col1]"></ng-content>
+        </div>
+        <div class="header-col left">
+          <ng-content select="[col2]"></ng-content>
+        </div>
+        <div class="header-col right">
+          <ng-content select="[col4]"></ng-content>
+        </div>
+        <div class="header-col right">
+          <ng-content select="[col3]"></ng-content>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+
+</header>

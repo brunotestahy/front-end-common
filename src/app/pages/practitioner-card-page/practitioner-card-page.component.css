@@ -1,0 +1,7 @@
+.edit{
+  background-image: url('./edit.png');
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}

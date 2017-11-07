@@ -1,0 +1,9 @@
+.pdf{
+  background-image: url('./PDF.svg');
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: center;
+  width:30px;
+  height: 30px;
+  cursor: pointer;
+}

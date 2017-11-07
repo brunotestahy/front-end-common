@@ -1,0 +1,24 @@
+.box{
+  height: 80px;
+  background-color: #f7f1ec;
+  display: inline-block;
+  max-width: 300px;
+  padding: 19px;
+}
+
+.title{
+  color: #AcA09d;
+  text-transform:uppercase;
+  font-size: 11px;
+}
+
+.name{
+  color: #635953;
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 3px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

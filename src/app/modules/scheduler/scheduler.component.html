@@ -1,0 +1,37 @@
+<div class="new-event" #newEvent *ngIf="customScheduleObject.newEventHeader.active">
+  <div class="thumbnail"
+       *ngIf="customScheduleObject.practitioner.thumbnail"
+       [ngStyle]="{
+            'border': customScheduleObject.practitioner.thumbnail.border,
+            'width': customScheduleObject.practitioner.thumbnail.width,
+            'height': customScheduleObject.practitioner.thumbnail.height
+        }">
+    <img [attr.src]="customScheduleObject.practitioner.thumbnail.photo" alt="Thumbnail"/>
+  </div>
+  <div class="pro-view" *ngIf="customScheduleObject.i18nLanguage.active">
+    {{'scheduler.new-event-title1' | translate}}{{customScheduleObject.newEventHeader.patientName}}{{'scheduler.new-event-title2'
+    | translate}}
+  </div>
+  <div class="pro-view" *ngIf="!customScheduleObject.i18nLanguage.active">
+    {{customScheduleObject.newEventHeader.title1}}{{customScheduleObject.newEventHeader.patientName}}{{customScheduleObject.newEventHeader.title2}}
+  </div>
+  <button class="btn-new-event" (click)="addNewEvent()">
+    <img src="../../assets/img/ic_add_box_black_48px.svg" alt="add_icon">
+    {{customScheduleObject.i18nLanguage.active ? ('scheduler.new-event-btn-label' | translate) : customScheduleObject.newEventHeader.buttonLabel}}
+  </button>
+</div>
+<p-schedule [header]="customScheduleObject.header"
+            [allDayText]="customScheduleObject.allDayText"
+            [events]="customScheduleObject.events"
+            [editable]="customScheduleObject.editable"
+            [aspectRatio]="customScheduleObject.aspectRatio"
+            [slotEventOverlap]="customScheduleObject.slotEventOverlap"
+            [defaultView]="customScheduleObject.defaultView"
+            [scrollTime]="customScheduleObject.scrollTime"
+            [timeFormat]="customScheduleObject.timeFormat"
+            [options]="customScheduleObject.options"
+            #schedule
+            (onViewRender)="loadToAgendaView()"
+            (onEventDrop)="buildScheduler()"
+            (onEventResize)="buildScheduler()">
+</p-schedule>

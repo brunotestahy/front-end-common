@@ -1,0 +1,14 @@
+li{
+    list-style: none;
+    padding: 12px;
+    white-space: nowrap;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+li.active, li:hover{
+    background-color: #625d59;
+}

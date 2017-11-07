@@ -1,0 +1,136 @@
+<smart-dialog [opened]="opened" (overlayClick)="onOverlayClick()">
+  <div class="front-end-img success" *ngIf="success">
+    {{successMessage}}
+  </div>
+  <smart-loading *ngIf="loading"></smart-loading>
+  <div class="wrapper" *ngIf="!success && !loading">
+    <div class="title">{{title}}</div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="row">
+        <div class="col-md-6">
+          <div class="alert alert-danger" *ngIf="error">
+            {{errorMessage}}
+          </div>
+            <div class="form-group">
+              <label for="role">{{practitionerRoleLabel}}</label>
+              <div class="field" [ngClass]="{'invalid': roleCtrl.invalid && roleCtrl.touched}">
+                <select name="role"
+                        id="role"
+                        class="form-control"
+                        [(ngModel)]="fields.role"
+                        required
+                        #roleCtrl="ngModel">
+                  <option *ngFor="let role of roles" [value]="role.code">{{role.display}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="givenName">{{givenNameLabel}}</label>
+              <div class="field" [ngClass]="{'invalid': givenNameCtrl.invalid && givenNameCtrl.touched}">
+                <input type="text"
+                      name="givenName"
+                      id="givenName"
+                      class="form-control"
+                      [placeholder]="givenNamePlaceHolder == null? '': givenNamePlaceHolder"
+                      [(ngModel)]="fields.givenName"
+                      required
+                      #givenNameCtrl="ngModel"
+                      smartTestEmpty/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="familyName">{{familyNameLabel}}</label>
+              <div class="field" [ngClass]="{'invalid': familyNameCtrl.invalid && familyNameCtrl.touched}">
+                <input type="text"
+                      name="familyName"
+                      id="familyName"
+                      class="form-control"
+                      [placeholder]="familyNamePlaceHolder == null? '': familyNamePlaceHolder"
+                      [(ngModel)]="fields.familyName"
+                      required
+                      #familyNameCtrl="ngModel"
+                      smartTestEmpty/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="nameSuffix">{{nameSuffixLabel}}</label>
+              <div class="field">
+                <input type="text"
+                      name="nameSuffix"
+                      id="nameSuffix"
+                      class="form-control"
+                      [placeholder]="nameSuffixPlaceHolder == null? '': nameSuffixPlaceHolder"
+                      [(ngModel)]="fields.nameSuffix"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cpf">{{cpfLabel}}</label>
+              <div class="field" [ngClass]="{'invalid': cpfCtrl.invalid && cpfCtrl.touched}">
+                <input type="text"
+                      name="cpf"
+                      id="cpf"
+                      class="form-control"
+                      [placeholder]="cpfPlaceHolder == null? '': cpfPlaceHolder"
+                      [ngModel]="fields.cpf | cpf"
+                      (ngModelChange)="fields.cpf = $event"
+                      required
+                      #cpfCtrl="ngModel"
+                      smartTestEmpty/>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+          <div class="photo-container form-group">
+            <smart-practitioner-photo-chooser [practitioner]="practitionerPhoto"
+              [placeHolder]="thumbnailPlaceHolder">
+            </smart-practitioner-photo-chooser>
+          </div>
+          <div class="form-group crm-group">
+            <label for="crm">{{crmLabel}}</label>
+            <div class="field" [ngClass]="{'invalid': crmCtrl.invalid && crmCtrl.touched}">
+              <input type="text"
+                    name="crm"
+                    id="crm"
+                    class="form-control"
+                    [placeholder]="crmPlaceHolder == null? '': crmPlaceHolder"
+                    [(ngModel)]="fields.crm"
+                    required
+                    #crmCtrl="ngModel"
+                    smartTestEmpty/>
+            </div>
+          </div>
+          <div class="form-group uf-group">
+            <label for="crmUF">{{crmUFLabel}}</label>
+            <div class="field" [ngClass]="{'invalid': crmUFCtrl.invalid && crmUFCtrl.touched}">
+              <select name="crmUF"
+                      id="crmUF"
+                      class="form-control"
+                      [(ngModel)]="fields.crmUF"
+                      required
+                      #crmUFCtrl="ngModel">
+                <option *ngFor="let uf of ufs" [value]="uf.code">{{uf.display}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group date-group">
+            <label for="birthdate">{{birthdateLabel}}</label>
+            <div class="field" [ngClass]="{'invalid': birthdateCtrl.invalid && birthdateCtrl.touched}">
+              <input type="date"
+                     name="birthdate"
+                     id="birthdate"
+                     class="form-control"
+                     [(ngModel)]="fields.birthdate"
+                     required
+                     #birthdateCtrl="ngModel"
+                     smartTestEmpty/>
+            </div>
+          </div>
+          <div class="form-group button-group">
+            <button class="btn" type="button" (click)="onOverlayClick()">{{cancelLabel}}</button>
+            <button class="btn btn-primary" type="submit" [disabled]="form.invalid">{{saveLabel}}</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</smart-dialog>

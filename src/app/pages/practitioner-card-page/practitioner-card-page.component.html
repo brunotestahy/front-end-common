@@ -1,0 +1,21 @@
+<div class="row">
+  <smart-practitioner-card [practitioner]="prac"></smart-practitioner-card>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-practitioner-card [practitioner]="prac"&gt;&lt;/smart-practitioner-card&gt;</code></pre>
+</div>
+
+<div class="row">
+  <smart-practitioner-card *ngFor="let practitioner of practitioners" [practitioner]="practitioner">
+    <div actions>
+      <div class="edit"></div>
+    </div>
+  </smart-practitioner-card>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-practitioner-card *ngFor="let practitioner of practitioners" &#91;practitioner&#93;="practitioner"&gt;
+  &lt;div actions&gt;
+    &lt;div class="edit"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/smart-practitioner-card&gt;</code></pre>
+</div>

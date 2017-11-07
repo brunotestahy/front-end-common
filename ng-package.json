@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "public_api.ts",
+    "externals": {
+      "primeng/primeng": "primeng/primeng",
+      "angular-calendar": "angular-calendar",
+      "angular-calendar/index": "angular-calendar",
+      "angular2-loaders-css": "angular2-loaders-css"
+    }
+  }
+}

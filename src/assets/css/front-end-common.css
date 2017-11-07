@@ -1,0 +1,45 @@
+/* CSS file for front-end-common images */
+
+.front-end-img.logo-img{
+  background-image: url('./img/logo.svg');
+}
+
+.front-end-img.background-building{
+  background-image: url('./img/background-building.svg');
+}
+
+.front-end-img.btn-next{
+  background-image: url('./img/next.png');
+}
+
+.front-end-img.success{
+  background-image: url('./img/success.gif');
+}
+
+.front-end-img.search{
+  background-image: url('./img/search.png');
+}
+
+.front-end-img.select-arrow.down{
+  background-image: url('./img/select-arrow-down.svg');
+}
+
+.front-end-img.select-arrow.up{
+  background-image: url('./img/select-arrow-up.svg');
+}
+
+.front-end-img.logout{
+  background-image: url('./img/logout.svg');
+}
+
+.front-end-img.practitioner{
+  background-image: url('./img/practitioner.svg');
+}
+
+.front-end-img.menu{
+  background-image: url('./img/ic_menu_black_24px.svg');
+}
+
+.front-end-img.menu-white{
+  background-image: url('./img/ic_menu_white_24px.svg');
+}

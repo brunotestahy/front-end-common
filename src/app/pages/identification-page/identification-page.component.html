@@ -1,0 +1,39 @@
+<div class="row">
+  <smart-identification [practitioners]="practitioners" menuHeader="Seus profissionais de saúde"></smart-identification>
+  <smart-identification [practitioners]="emptyPractitioners"
+                        menuHeader="Seus profissionais de saúde"
+                        emptyPractitionersMessage="Nenhum profissional encontrado"></smart-identification>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-identification &#91;practitioners&#93;="practitioners" menuHeader="Seus profissionais de saúde"&gt;&lt;/smart-identification&gt;</code></pre>
+</div>
+<div class="row">
+    <smart-header>
+      <div col3>
+          <smart-identification [ngStyle]="{'margin-top': '-20px'}"
+                                [practitioners]="practitioners"
+                                (open)="log('load practitioners');"
+                                [menuTransform]="'translate(-620px, 0)'"
+                                turnInfo="14/08 - 07:00 às 13:00"
+                                width="700px"
+                                height="400px"
+                                menuHeader="Seus profissionais de saúde">
+          </smart-identification>
+      </div>
+    </smart-header>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-header>
+  &lt;div col3>
+      &lt;smart-identification [ngStyle]="&#123;'margin-top': '-20px'}"
+                            [practitioners]="practitioners"
+                            (open)="log('load practitioners');"
+                            [menuTransform]="'translate(-620px, 0)'"
+                            turnInfo="14/08 - 07:00 às 13:00"
+                            width="700px"
+                            height="400px"
+                            menuHeader="Seus profissionais de saúde">
+      &lt;/smart-identification>
+  &lt;/div>
+&lt;/smart-header></code></pre>
+</div>

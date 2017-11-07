@@ -1,0 +1,11 @@
+<div class="thumbnail-wrapper" *ngIf="practitioner != null">
+  <div class="thumbnail"
+       [ngStyle]="{
+            'border': border, 'width': width, 'height': height, 'border-radius': borderRadius,
+            'background-image': 'url(\'' + getBackgroundPhoto() + '\')'
+        }">
+    <div class="initials" *ngIf="strIsEmpty(practitioner.photo)">
+      {{getInitials()}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+/deep/ .content{
+  max-height: 746px;
+  overflow: auto;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+label{
+  display: block;
+  color: #A2958e;
+  font-size: 18px;
+  margin: 24px 0 10px;
+  font-weight: bold;
+}
+
+input, select{
+  width: 300px;
+  height: 45px;
+}
+
+@media (min-width: 990px){
+  .wrapper{
+    min-width:620px;
+  }
+  input, select{
+    height: 46px;
+  }
+}
+
+[name=crm]{
+  width: 205px;
+}
+
+[name=crmUF]{
+  width: 70px;
+}
+
+.crm-group, .uf-group{
+  float: left;
+  padding-bottom: 10px;
+}
+
+.crm-group label, .uf-group label{
+  margin: 10px 0 10px;
+}
+
+.uf-group{
+  transform: translate(50%, 0);
+  margin-left: -20px;
+}
+
+.date-group{
+  clear: both;
+}
+
+.button-group{
+  margin-top: 60px;
+  margin-right: -40px;
+  display: block;
+}
+
+.button-group .btn{
+  margin-right: 12px;
+  text-transform: uppercase;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #da9d8c;
+  color: #da9d8c;
+}
+
+.button-group .btn.btn-primary{
+  padding: 12px 33px;
+  background-color: #da9d8c;
+  color: #fff;
+}
+
+.photo-container{
+  text-align: center;
+}
+
+.field{
+  border: 1px dashed #777;
+  border-radius: 7px;
+  padding: 2px;
+  display: inline-block;
+}
+
+.field.invalid {
+  border: 1px dashed #ff0000;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+  border: 1px solid #ff9999;
+}
+
+.success{
+  background-repeat: no-repeat;
+  background-size: 200px;
+  padding: 20px 30px 20px 80px;
+  font-size: 20px;
+  font-weight: bold;
+  background-position-x: -70px;
+  background-position-y: center;
+}

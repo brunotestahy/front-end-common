@@ -1,0 +1,15 @@
+html,
+body {
+  font-family: 'skolasansregular';
+  font-size: "15px";
+  background-color: #000;
+}
+
+#content-wrapper{
+  padding: 10px;
+}
+
+/deep/ .row::before{
+  content: attr(data-label);
+  margin-top:10px;
+}

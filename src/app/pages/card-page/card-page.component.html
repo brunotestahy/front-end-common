@@ -1,0 +1,23 @@
+<div class="row">
+  <smart-card></smart-card>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-card&gt;&lt;/smart-card&gt;</code></pre>
+</div>
+
+<div class="row">
+  <smart-card *ngFor="let i of [1,2,3]" (cardClick)="logCardClick()">
+    <div content>{{i}}</div>
+    <div actions>
+      <div class="pdf"></div>
+    </div>
+  </smart-card>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-card *ngFor="let i of &#91;1,2,3,4,5,6,7&#93;"&gt;
+  &lt;div content&gt;&#123;&#123;i&#125; &#125;&lt;/div&gt;
+  &lt;div actions&gt;
+    &lt;div class="pdf"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/smart-card&gt;</code></pre>
+</div>

@@ -1,0 +1,5 @@
+<li [ngClass]="{'active': active}">
+  <a href="{{active? '#' : href}}">
+    <ng-content></ng-content>
+  </a>
+</li>

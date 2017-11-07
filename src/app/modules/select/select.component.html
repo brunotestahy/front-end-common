@@ -1,0 +1,21 @@
+<div class="select-container">
+  <div></div>
+  <div class="select-field">
+    <div class="display front-end-img select-arrow"
+         (click)="onDisplayClick($event)"
+         [ngClass]="{'up': opened, 'down': !opened}"
+         [ngStyle]="{'width': width || 'auto'}">
+      {{display || placeHolder || '&nbsp;'}}
+    </div>
+    <div class="suggestion-box" #suggestionBox *ngIf="opened">
+      <ul #suggestionList>
+        <ng-content></ng-content>
+      </ul>
+    </div>
+  </div>
+  <input type="hidden"
+         #hidden
+         [(value)]="value"
+         [id]="id"
+         [name]="name"/>
+</div>

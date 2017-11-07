@@ -1,0 +1,25 @@
+/deep/ .practitioner-card .thumbnail-wrapper{
+  margin-left: 50%;
+  margin-bottom: 15px;
+  transform: translate(-50%, 0);
+}
+
+.role{
+color: #AcA09d;
+text-transform:uppercase;
+font-size: 11px;
+}
+
+.name{
+  color: #534744;
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 3px;
+  font-family: skolasansblack
+}
+
+.crm{
+  color: #806d5b;
+  font-size: 15px;
+  font-weight: bold;
+}

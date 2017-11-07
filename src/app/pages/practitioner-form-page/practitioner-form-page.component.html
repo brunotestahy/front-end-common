@@ -1,0 +1,53 @@
+<div class="row">
+    <smart-practitioner-form [opened]="opened"
+                             [practitioner]="practitioner"
+                             (overlayClick)="onOverlayClick()"
+                             (practitionerSaved)="onPractitionerSaved($event)"
+                             title="Incluir Profissional"
+                             practitionerRoleLabel="Cargo"
+                             givenNameLabel="Nome"
+                             familyNameLabel="Sobrenome"
+                             nameSuffixLabel="Sufixo"
+                             crmLabel="CRM"
+                             crmUFLabel="UF"
+                             cpfLabel="CPF"
+                             birthdateLabel="Data de nascimento"
+                             saveLabel="cadastrar"
+                             cancelLabel="cancelar"
+                             thumbnailPlaceHolder="Incluir imagem"
+                             givenNamePlaceHolder="Digite o nome"
+                             familyNamePlaceHolder="Digite o sobrenome"
+                             nameSuffixPlaceHolder="Ex.: Junior, Filho, Neto"
+                             crmPlaceHolder="Digite o CRM"
+                             cpfPlaceHolder="Digite o CPF"
+                             successMessage="Profissional salvo com sucesso"
+                             errorMessage="Ocorreu um erro, tente novamente mais tarde.">
+    </smart-practitioner-form>
+    <button class="btn btn-primary" (click)="openDialog()">Open</button>
+  </div>
+
+  <div class="row" data-label="Codigo">
+    <pre><code class="html">&lt;smart-practitioner-form [opened]="opened"
+                         [practitioner]="practitioner"
+                         (overlayClick)="onOverlayClick()"
+                         (practitionerSaved)="onPractitionerSaved($event)"
+                         title="Incluir Profissional"
+                         practitionerRoleLabel="Cargo"
+                         givenNameLabel="Nome"
+                         familyNameLabel="Sobrenome"
+                         nameSuffixLabel="Sufixo"
+                         crmLabel="CRM"
+                         crmUFLabel="UF"
+                         cpfLabel="CPF"
+                         saveLabel="cadastrar"
+                         cancelLabel="cancelar"
+                         thumbnailPlaceHolder="Incluir imagem"
+                         givenNamePlaceHolder="Digite o nome"
+                         familyNamePlaceHolder="Digite o sobrenome"
+                         nameSuffixPlaceHolder="Ex.: Junior, Filho, Neto"
+                         crmPlaceHolder="Digite o CRM"
+                         cpfPlaceHolder="Digite o CPF"
+                         successMessage="Profissional salvo com sucesso"
+                         errorMessage="Ocorreu um erro, tente novamente mais tarde.">
+&lt;/smart-practitioner-form></code></pre>
+  </div>

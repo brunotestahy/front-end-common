@@ -1,0 +1,30 @@
+<div class="wrapper" [ngClass]="{'selected': opened}">
+  <div class="box front-end-img practitioner" (click)="onShow();"></div>
+  <div class="box icon front-end-img practitioner" (click)="onShow();"></div>
+  <div class="menu" [ngStyle]="{ 'transform': (menuTransform == null || menuTransform.trim().length === 0)? null: menuTransform }">
+    <div class="menu-header">
+      <h3>{{menuHeader}}</h3>
+      <span class="time" *ngIf="turnInfo != null && turnInfo.trim().length != 0">{{turnInfo}}</span>
+    </div>
+    <div class="list-container" [ngStyle]="{
+           'width': (width == null || width.trim().length === 0) ? null: width,
+           'min-height': getCalculatedHeight()
+          }">
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="getKeys() == null || getKeys().length === 0">
+          <h4>{{emptyPractitionersMessage}}</h4>
+        </li>
+        <li class="list-group-item" *ngFor="let practitionerKey of getKeys()">
+          <div class="thumbnail-wrapper">
+            <smart-practitioner-thumbnail [practitioner]="practitioners[practitionerKey]"></smart-practitioner-thumbnail>
+          </div>
+          <div class="info-wrapper">
+            <div>{{getCareProviderType(practitionerKey)}}</div>
+            <div>{{practitioners[practitionerKey].fullName}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="overlay" (click)="close();"></div>
+</div>

@@ -1,0 +1,16 @@
+<div class="row">
+  <smart-dialog [opened]="opened" (overlayClick)="onOverlayClick()">
+    <h2>Clique no overlay para fechar o diálogo
+    </h2>
+  </smart-dialog>
+  <button class="btn btn-primary" (click)="openDialog()">Open</button>
+</div>
+
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;div class="row">
+  &lt;smart-dialog [opened]="opened" (overlayClick)="onOverlayClick()">
+    &lt;h2>Click on overlay to close this dialog&lt;/h2>
+  &lt;/smart-dialog>
+  &lt;button class="btn btn-primary" (click)="openDialog()">Open&lt;/button>
+&lt;/div></code></pre>
+</div>

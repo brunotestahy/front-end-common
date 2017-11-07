@@ -1,0 +1,22 @@
+<div class="row">
+  <smart-search-header [suggestions]="suggestions"
+                       (updateSuggestions)="updateSuggestions($event)"
+                       title="Profissionais de Saúde"
+                       placeHolder="Buscar profissionais de saúde"
+                       width="60%"
+                       margin="0 0 0 20px"
+                       invalidLengthMessage="Texto muito pequeno para buscar">
+    <h4> Conteúdo adicional </h4>
+  </smart-search-header>
+</div>
+<div class="row" data-label="Codigo">
+  <pre><code class="html">&lt;smart-search-header [suggestions]="suggestions"
+                     (updateSuggestions)="updateSuggestions($event)"
+                     title="Profissionais de Saúde"
+                     placeHolder="Buscar profissionais de saúde"
+                     width="60%"
+                     margin="0 0 0 20px"
+                     invalidLengthMessage="Texto muito pequeno para buscar">
+  &lt;h4> Conteúdo adicional &lt;/h4>
+&lt;/smart-search-header></code></pre>
+</div>

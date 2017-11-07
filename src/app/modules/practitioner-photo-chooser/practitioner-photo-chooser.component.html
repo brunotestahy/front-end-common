@@ -1,0 +1,15 @@
+<div class="photo-chooser">
+  <smart-practitioner-thumbnail [practitioner]="practitioner"
+                                border="12px solid #F1E9E6"
+                                width="215px"
+                                height="215px"
+                                borderRadius="107.5px"
+                                (click)="file.click()"
+                                class="photo-chooser-thumbnail"></smart-practitioner-thumbnail>
+  <input type="file"
+         style="display: none;"
+         accept=".pcx,.bmp,.gif,.jpg,.jpeg,.png"
+         (change)="fileSelected()"
+         #file/>
+  <a (click)="file.click()" *ngIf="practitioner.photo == null">{{placeHolder}}</a>
+</div>
