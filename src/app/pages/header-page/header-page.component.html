@@ -1,5 +1,5 @@
 <div class="row">
-  <smart-header>
+  <smart-header (logoClick)="$event.preventDefault();" logoHref="http://www.google.com">
     <div col1>coluna 1</div>
     <div col2>coluna 2</div>
     <div col3>coluna 3</div>
@@ -7,10 +7,10 @@
   </smart-header>
 </div>
 <div class="row" data-label="Codigo">
-  <pre><code class="html">&lt;smart-header&gt;
-  &lt;div col1&gt;coluna 1&lt;/div&gt;
-  &lt;div col2&gt;coluna 2&lt;/div&gt;
-  &lt;div col3&gt;coluna 3&lt;/div&gt;
-  &lt;div col4&gt;coluna 4&lt;/div&gt;
-&lt;/smart-header&gt;</code></pre>
+  <pre><code class="html">&lt;smart-header (logoClick)="$event.preventDefault();" logoHref="http://www.google.com">
+    &lt;div col1>coluna 1&lt;/div>
+    &lt;div col2>coluna 2&lt;/div>
+    &lt;div col3>coluna 3&lt;/div>
+    &lt;div col4>coluna 4&lt;/div>
+  &lt;/smart-header></code></pre>
 </div>

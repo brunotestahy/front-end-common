@@ -6,7 +6,12 @@
       "primeng/primeng": "primeng/primeng",
       "angular-calendar": "angular-calendar",
       "angular-calendar/index": "angular-calendar",
-      "angular2-loaders-css": "angular2-loaders-css"
+      "angular2-loaders-css": "angular2-loaders-css",
+      "angular-svg-round-progressbar": "angular-svg-round-progressbar",
+      "@ng-bootstrap/ng-bootstrap": "@ng-bootstrap/ng-bootstrap",
+      "hammer-timejs": "hammer-timejs",
+      "hammerjs": "hammerjs",
+      "moment": "moment"
     }
   }
 }

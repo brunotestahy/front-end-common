@@ -74,11 +74,15 @@
 
 ul{
   position: absolute;
-  top: 0;
+  top: 45px;
   right: 0;
   left: 0;
   bottom: 0;
   overflow: auto;
+}
+
+ul.false {
+  top: 0px;
 }
 
 li{
@@ -106,3 +110,20 @@ li{
   white-space: nowrap;
 }
 
+.evaluation-reminder {
+  height: 45px;
+  color: #fff;
+  font-family: 'skolasansbold';
+  font-size: 14px;
+  background-color: #b37d71;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.front-end-img.arrow-back {
+  height: 30px;
+  width: 30px;
+}

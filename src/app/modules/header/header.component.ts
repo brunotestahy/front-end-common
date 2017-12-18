@@ -8,15 +8,15 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() logoHref = '/';
-  @Output() logoClick = new EventEmitter<void>();
+  @Output() logoClick = new EventEmitter<MouseEvent>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onlogoClick() {
-    this.logoClick.emit();
+  onlogoClick(event: MouseEvent) {
+    this.logoClick.emit(event);
   }
 
 }

@@ -4,7 +4,8 @@
     <div class="display front-end-img select-arrow"
          (click)="onDisplayClick($event)"
          [ngClass]="{'up': opened, 'down': !opened}"
-         [ngStyle]="{'width': width || 'auto'}">
+         [ngStyle]="{'width': width || 'auto'}"
+         title="{{display || placeHolder || '&nbsp;'}}">
       {{display || placeHolder || '&nbsp;'}}
     </div>
     <div class="suggestion-box" #suggestionBox *ngIf="opened">

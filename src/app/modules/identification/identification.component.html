@@ -1,16 +1,19 @@
-<div class="wrapper" [ngClass]="{'selected': opened}">
-  <div class="box front-end-img practitioner" (click)="onShow();"></div>
+<div class="wrapper" [ngClass]="{'selected': opened}" >
+  <div class="box front-end-img practitioner" (click)="onShow();" ></div>
   <div class="box icon front-end-img practitioner" (click)="onShow();"></div>
   <div class="menu" [ngStyle]="{ 'transform': (menuTransform == null || menuTransform.trim().length === 0)? null: menuTransform }">
     <div class="menu-header">
       <h3>{{menuHeader}}</h3>
-      <span class="time" *ngIf="turnInfo != null && turnInfo.trim().length != 0">{{turnInfo}}</span>
+      <span class="time">{{currentDay}} - {{shiftInfo}}</span>
     </div>
     <div class="list-container" [ngStyle]="{
            'width': (width == null || width.trim().length === 0) ? null: width,
            'min-height': getCalculatedHeight()
           }">
-      <ul class="list-group">
+      <div class="evaluation-reminder" (click)="onEvaluationClick()" *ngIf="haveAppointments">
+        {{evaluationMessage}}
+      </div>
+      <ul class="list-group {{haveAppointments}}">
         <li class="list-group-item" *ngIf="getKeys() == null || getKeys().length === 0">
           <h4>{{emptyPractitionersMessage}}</h4>
         </li>

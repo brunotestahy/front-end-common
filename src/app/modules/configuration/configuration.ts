@@ -17,6 +17,7 @@ export interface FrontEndConfig {
     searchURL?: string;
     paginationURL?: string;
     careProviderURL?: string;
+    careProvidersURL?: string;
   };
   login?: {
     authType?: string;
@@ -37,5 +38,15 @@ export interface FrontEndConfig {
   };
   conceptmap?: {
     baseURL: string;
+  };
+  appointment?: {
+    baseURL: string;
+    shiftURL?: string;
+  };
+  rating?: {
+    baseURL: string;
+    searchURL?: string;
+    reasonURL?: string;
+    paginationURL?: string;
   };
 }

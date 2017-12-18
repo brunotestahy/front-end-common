@@ -9,11 +9,13 @@ import { AbstractService } from '../services/abstract.service';
 @Injectable()
 export class PatientService extends AbstractService {
 
-  private config: FrontEndConfig;
+  protected config: FrontEndConfig;
 
-  private searchURL: string;
-  private paginationURL: string;
-  private careProviderURL: string;
+  protected searchURL: string;
+  protected paginationURL: string;
+  protected careProviderURL: string;
+  protected his: string;
+  protected careProvidersURL: string;
 
   constructor(protected http: Http, @Inject(FrontEndConfigProvider) config) {
     super(http);
@@ -22,14 +24,16 @@ export class PatientService extends AbstractService {
     this.searchURL = config.patient.searchURL;
     this.paginationURL = config.patient.paginationURL;
     this.careProviderURL = config.patient.careProviderURL;
+    this.careProvidersURL = config.patient.careProvidersURL;
+    this.his = config.his;
   }
 
-  public search(names?: string, room?: string, his?: string, admitted?: boolean, full?: boolean, count?: number): Observable<any> {
+  public search(names?: string, room?: string, admitted?: boolean, full?: boolean, count?: number): Observable<any> {
     const options = new RequestOptions();
     options.params = new URLSearchParams();
     options.params.set('names', names);
     options.params.set('room', room);
-    options.params.set('his', his);
+    options.params.set('his', this.his);
     options.params.set('admitted', String(admitted));
     options.params.set('full', String(full));
     if (count) {
@@ -59,4 +63,9 @@ export class PatientService extends AbstractService {
     options.params.set('practitionerId', practitionerId);
     return super.delete('/' + patientId + this.careProviderURL, options);
   }
+
+  public getCareProviders(id: string): Observable<any> {
+    return super.get('/' + id + this.careProvidersURL, null);
+  }
+
 }

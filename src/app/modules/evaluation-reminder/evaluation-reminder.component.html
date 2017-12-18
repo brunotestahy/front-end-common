@@ -1,0 +1,22 @@
+<smart-dialog [opened]="opened"
+              (overlayClick)="onOverlayClick()"
+              *ngIf="patient != null">
+    <div class="header">{{headerText}}</div>
+    <div class="reason">{{greetingText}}, {{patient.name}}, {{reasonText}}</div>
+    <div class="fake-cards">
+      <smart-practitioner-card *ngFor="let practitioner of practitioners" [practitioner]="practitioner">
+        <div evaluation>
+          <ngb-rating [(rate)]="currentRate" >
+            <ng-template let-fill="fill">
+              <span class="star" [class.filled]="fill === 100">&#9733;</span>
+            </ng-template>
+          </ngb-rating>
+        </div>
+      </smart-practitioner-card>
+    </div>
+    <input class="submit-button" type="button" [value]="buttonText" (click)="onButtonClick()">
+    <div class="asterisk-container">
+      <p class="asterisk">{{ asteriskTopText }}</p>
+      <p class="asterisk">{{ asteriskBottomText }}</p>
+    </div>
+</smart-dialog>

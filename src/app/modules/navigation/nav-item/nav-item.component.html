@@ -1,10 +1,9 @@
 <div class="box"
-  [ngStyle]="{'background': 'url(' + imgPath + ')'}"
-  routerLinkActive="active"
-  [routerLink]="route">
-
-  <div class="nav-label">
-    {{label}}
-  </div>
-
+    routerLinkActive="active"
+    [ngStyle]="{'background': 'url(' + usedImgPath + ')'}"
+    [routerLink]="route"
+    *ngIf="usedImgPath != null">
+    <div class="nav-label">
+      {{label}}
+    </div>
 </div>

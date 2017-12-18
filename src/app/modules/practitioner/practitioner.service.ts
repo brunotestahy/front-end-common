@@ -12,8 +12,6 @@ export class PractitionerService extends AbstractService {
 
   private config: FrontEndConfig;
 
-  private identification: string;
-
   private searchURL: string;
   private paginationURL: string;
   private roleURL: string;
@@ -48,12 +46,13 @@ export class PractitionerService extends AbstractService {
     }));*/
   }
 
-  public searchPractitioners(names?: string, his?: string, full?: boolean, count?: number): Observable<any> {
+  public searchPractitioners(names?: string, his?: string, full?: boolean, role?: string, count?: number): Observable<any> {
     const options = new RequestOptions();
     options.params = new URLSearchParams();
     options.params.set('names', names);
     options.params.set('his', his);
     options.params.set('full', String(full));
+    options.params.set('role', role);
     if (count) {
       options.params.set('count', String(count));
     }

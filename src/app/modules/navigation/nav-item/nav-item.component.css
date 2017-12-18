@@ -24,5 +24,9 @@
 }
 
 .active{
-  background-color: #c1b7b1 !important;
+  background-color: #7d746d !important;
+}
+
+.active .nav-label{
+  color: #fff;
 }

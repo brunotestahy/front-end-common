@@ -43,3 +43,34 @@
 .front-end-img.menu-white{
   background-image: url('./img/ic_menu_white_24px.svg');
 }
+
+.front-end-img.dia{
+  background-image: url('./img/dia.png');
+}
+
+.front-end-img.tarde{
+  background-image: url('./img/tarde.png');
+}
+
+.front-end-img.noite{
+  background-image: url('./img/noite.png');
+}
+
+.front-end-img.arrow-back{
+  background-image: url('./img/arrow_back.svg');
+  height: 30px;
+  width: 30px;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+smart-evaluation-reminder smart-practitioner-card:first-child .thumbnail{
+  background-image: url('./img/nurse_1.png') !important;
+}
+
+smart-evaluation-reminder smart-practitioner-card:last-child .thumbnail{
+  background-image: url('./img/nurse_2.png') !important;
+}

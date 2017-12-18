@@ -9,7 +9,7 @@ export abstract class UserLoader implements OnInit {
   constructor(protected loginService: LoginService, protected router: Router) { }
 
   ngOnInit() {
-    sessionStorage.clear();
+    // sessionStorage.clear();
     this.loginService.me().subscribe(response => {
       if (response.room != null && response.room.trim().length !== 0) {
         this.type = 'patient';

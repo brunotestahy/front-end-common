@@ -1,0 +1,21 @@
+.greeting-message img,
+.greeting-message span{
+  float: left;
+}
+
+.greeting-message {
+  display: block;
+  color: #b47e71;
+  font-family: 'skolasansmedium';
+  font-size: 18px;
+}
+
+.greeting {
+  padding-top: 4px;
+  padding-left: 5px;
+}
+
+.image {
+  height: 34px;
+  width: 38px;
+}

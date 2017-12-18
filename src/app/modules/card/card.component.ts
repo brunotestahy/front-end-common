@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'smart-card',
@@ -7,11 +7,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
+  @Input() selected: boolean;
   @Output() cardClick: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onCardClick() {
     this.cardClick.emit();

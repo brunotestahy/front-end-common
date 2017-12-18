@@ -11,7 +11,7 @@
   display: inline-block;
   top: 0;
   min-height: 38px;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .select-field.fixed{
@@ -31,7 +31,7 @@
   white-space: nowrap;
   background-repeat: no-repeat;
   background-position-y: center;
-  background-position-x: 90%;
+  background-position-x: 94%;
   background-color: #fff;
   overflow: hidden;
   text-overflow: ellipsis;

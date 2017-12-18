@@ -26,7 +26,10 @@ import { SelectModule } from './modules/select/select.module';
 import { LoginModule } from './modules/login/login.module';
 import { UiLogModule } from './modules/ui-log/ui-log.module';
 import { MenuModule } from './modules/menu/menu.module';
-
+import { RulesCalendarModule } from './modules/rules-calendar/rules-calendar.module';
+import { SaveChangesButtonModule } from './modules/save-changes-button/save-changes-button.module';
+import { GreetingModule} from './modules/greeting/greeting.module';
+import { EvaluationReminderModule} from './modules/evaluation-reminder/evaluation-reminder.module';
 /*
  * Sample pages components
  */
@@ -50,7 +53,10 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { UiLogPageComponent } from './pages/ui-log-page/ui-log-page.component';
 import { LogoutPageComponent } from './pages/logout-page/logout-page.component';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
-
+import { RulesCalendarPageComponent } from './pages/rules-calendar-page/rules-calendar-page.component';
+import { SaveChangesButtonPageComponent } from './pages/save-changes-button-page/save-changes-button-page.component';
+import { GreetingPageComponent} from './pages/greeting-page/greeting-page.component';
+import { EvaluationReminderPageComponent} from './pages/evaluation-reminder-page/evaluation-reminder-page.component';
 /*
  * Configuration
  */
@@ -82,6 +88,10 @@ const routes: Routes = [
   { path: 'logout', component: LogoutPageComponent },
   { path: 'ui-log', component: UiLogPageComponent },
   { path: 'menu', component: MenuPageComponent },
+  { path: 'rules-calendar', component: RulesCalendarPageComponent },
+  { path: 'save-changes-button', component: SaveChangesButtonPageComponent },
+  { path: 'greeting', component: GreetingPageComponent },
+  { path: 'evaluation-reminder', component: EvaluationReminderPageComponent },
   { path: '**', redirectTo: '/' }
 ];
 
@@ -107,7 +117,11 @@ const routes: Routes = [
     LoginPageComponent,
     UiLogPageComponent,
     LogoutPageComponent,
-    MenuPageComponent
+    MenuPageComponent,
+    RulesCalendarPageComponent,
+    SaveChangesButtonPageComponent,
+    GreetingPageComponent,
+    EvaluationReminderPageComponent
   ],
   imports: [
     BrowserModule,
@@ -130,6 +144,10 @@ const routes: Routes = [
     LoginModule,
     UiLogModule,
     MenuModule,
+    RulesCalendarModule,
+    SaveChangesButtonModule,
+    GreetingModule,
+    EvaluationReminderModule,
     RouterModule.forRoot(routes)
   ],
   providers: [

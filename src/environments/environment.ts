@@ -8,7 +8,7 @@ export interface Environment extends FrontEndConfig {
   production: boolean;
 }
 
-const identificationServer = 'https://10.25.44.129:8459/identification';
+const identificationServer = 'https://10.25.44.130:8459/identification_server';
 
 export const environment: Environment = {
   production: false,
@@ -26,7 +26,8 @@ export const environment: Environment = {
     baseURL: `${identificationServer}/api/patient`,
     searchURL: '/search',
     paginationURL: '/paginate',
-    careProviderURL: '/practitioner'
+    careProviderURL: '/practitioner',
+    careProvidersURL: '/careProviders'
   },
   room: {
     baseURL: `${identificationServer}/api/room`,
@@ -47,6 +48,16 @@ export const environment: Environment = {
     bulkRetry: 5,
     bulkSaveURL: '/bulksave',
     loggingInterval: 15000
+  },
+  appointment: {
+    baseURL: `${identificationServer}/api/appointment`,
+    shiftURL: '/shift'
+  },
+  rating: {
+    baseURL: `${identificationServer}/api/rating`,
+    searchURL: '/search',
+    reasonURL: '/reason',
+    paginationURL: '/paginate'
   },
   thumbnail: 'http://10.25.44.132:8080/thumbnail_server/thumbnail'
 };
