@@ -10,14 +10,15 @@
            'width': (width == null || width.trim().length === 0) ? null: width,
            'min-height': getCalculatedHeight()
           }">
-      <div class="evaluation-reminder" (click)="onEvaluationClick()" *ngIf="haveAppointments">
-        {{evaluationMessage}}
-      </div>
-      <ul class="list-group {{haveAppointments}}">
-        <li class="list-group-item" *ngIf="getKeys() == null || getKeys().length === 0">
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngIf="emptyPractitioners && emptyNurses">
+          <h4>{{emptyAllMessage}}</h4>
+        </li>
+        <li class="list-group-item" *ngIf="emptyPractitioners && !emptyNurses">
           <h4>{{emptyPractitionersMessage}}</h4>
         </li>
-        <li class="list-group-item" *ngFor="let practitionerKey of getKeys()">
+        <li class="list-group-item" *ngFor="let practitionerKey of getKeys(practitioners)">
           <div class="thumbnail-wrapper">
             <smart-practitioner-thumbnail [practitioner]="practitioners[practitionerKey]"></smart-practitioner-thumbnail>
           </div>
@@ -27,6 +28,24 @@
           </div>
         </li>
       </ul>
+      <div class="evaluation-reminder" (click)="onEvaluationClick()" *ngIf="haveAppointments">
+        {{evaluationMessage}}
+      </div>
+      <ul class="list-group nurses" (click)="onEvaluationClick()" >
+        <li class="list-group-item" *ngIf="!emptyPractitioners && emptyNurses">
+          <h4>{{emptyNurseMessage}}</h4>
+        </li>
+        <li class="list-group-item" *ngFor="let nurseKey of getKeys(nurses)">
+          <div class="thumbnail-wrapper">
+            <smart-practitioner-thumbnail [practitioner]="nurses[nurseKey]"></smart-practitioner-thumbnail>
+          </div>
+          <div class="info-wrapper">
+            <div>{{getCareProviderType(nurseKey)}}</div>
+            <div>{{nurses[nurseKey].fullName}}</div>
+          </div>
+        </li>
+      </ul>
+
     </div>
   </div>
   <div class="overlay" (click)="close();"></div>

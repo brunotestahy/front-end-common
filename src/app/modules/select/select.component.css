@@ -11,7 +11,7 @@
   display: inline-block;
   top: 0;
   min-height: 38px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .select-field.fixed{

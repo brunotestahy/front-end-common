@@ -8,7 +8,7 @@ export interface Environment extends FrontEndConfig {
   production: boolean;
 }
 
-const identificationServer = 'https://10.25.44.130:8459/identification_server';
+const identificationServer = 'https://rdhcssmarthml01.rededor.corp/identification_server';
 
 export const environment: Environment = {
   production: false,

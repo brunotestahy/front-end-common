@@ -56,6 +56,7 @@
 .menu h3{
   font-weight: bold;
   font-size: 27px;
+  margin-top: 10px !important;
 }
 
 .menu .time{
@@ -73,22 +74,14 @@
 }
 
 ul{
-  position: absolute;
-  top: 45px;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  overflow: auto;
-}
-
-ul.false {
-  top: 0px;
+  position: relative;
+  margin-bottom: 0px !important;
 }
 
 li{
-  height: 130px;
+  height: 110px;
   border: 3px solid #F1E9E6;
-  padding: 30px 40px;
+  padding: 20px 30px;
 }
 
 .info-wrapper{
@@ -126,4 +119,8 @@ li{
 .front-end-img.arrow-back {
   height: 30px;
   width: 30px;
+}
+
+.nurses {
+  cursor: pointer;
 }
